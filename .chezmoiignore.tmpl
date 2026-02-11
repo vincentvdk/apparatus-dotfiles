@@ -1,6 +1,9 @@
 # Themes are managed by butler, not chezmoi
 themes/
 
+# Neovim plugin lockfile - user-specific
+lazy-lock.json
+
 {{ if not (env "CONTAINER_ID") }}
 # On host directly - chezmoi not used (OS image handles configs)
 *
