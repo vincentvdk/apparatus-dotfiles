@@ -34,7 +34,7 @@ show_actions = ["alt j"]
 
 # Provider prefixes (shortcuts to specific search types)
 [providers]
-  [providers.prefixes]
+  [prefixes]
   "/" = "files"        # File browser
   ">" = "runner"       # Run commands
   "@" = "websearch"    # Web search

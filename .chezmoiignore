@@ -1,0 +1,33 @@
+# Themes are managed by butler, not chezmoi
+themes/
+
+# Neovim plugin lockfile - user-specific
+lazy-lock.json
+
+# Always ignore sensitive and machine-specific files
+.ssh/
+.gpg/
+.password-store/
+.gitconfig
+.gitconfig.local
+.local/share/
+.cache/
+.runtime/
+.local/state/
+
+{{ if not (env "CONTAINER_ID") }}
+# On host directly - manage all configs
+{{ else if eq (env "APPARATUS_OS_HOME") "1" }}
+# OS home distrobox - only manage terminal/CLI configs
+dot_config/hypr
+dot_config/kitty
+dot_config/mako
+dot_config/waybar
+dot_config/uwsm
+dot_config/walker
+{{ else if eq (env "APPARATUS_OS_HOME") "0" }}
+# Dedicated home distrobox - manage all configs
+{{ else }}
+# Unknown state - ignore everything to be safe
+*
+{{ end }}
