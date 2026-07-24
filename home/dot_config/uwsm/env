@@ -24,5 +24,5 @@ export MOZ_ENABLE_WAYLAND=1
 export XCURSOR_SIZE=24
 export HYPRCURSOR_SIZE=24
 
-# Terminal (for SSH compatibility with terminals like Rio)
+# Terminal
 export TERM=xterm-256color
