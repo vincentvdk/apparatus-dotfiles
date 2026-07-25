@@ -1,0 +1,137 @@
+[general]
+# Start Satty in fullscreen mode on current monitor for maximum annotation space
+fullscreen = "current-screen"
+
+# Try to enforce floating window - works well with Hyprland
+floating-hack = true
+
+# No window decorations for cleaner annotation experience
+no-window-decoration = true
+
+# Exit immediately after save/copy action - streamlines workflow
+# This means Satty closes right after you save or copy, no extra steps needed
+early-exit = ["save", "copy"]
+
+# Automatically copy to clipboard after every annotation change
+# Great for quick edits where you want to paste immediately
+auto-copy = true
+
+# Also save to file when copying to clipboard
+save-after-copy = true
+
+# Output filename with timestamp in Pictures/Screenshots directory
+# Supports format specifiers: https://docs.rs/chrono/latest/chrono/format/strftime/index.html
+output-filename = "~/Pictures/Screenshots/satty-%Y-%m-%d_%H-%M-%S.png"
+
+# Use wl-copy for Wayland clipboard (standard on Fedora)
+copy-command = "wl-copy"
+
+# Corner roundness for rectangles and shapes (0 = sharp corners)
+corner-roundness = 12
+
+# Initial tool when opening Satty
+# brush = freehand drawing
+# crop = crop selection
+# arrow = arrow tool
+# rectangle = rectangle/box tool
+# text = text annotation
+# Since you're using hyprshot for capture, crop might be less needed
+initial-tool = "brush"
+
+# Annotation size multiplier - makes annotations more visible
+annotation-size-factor = 2
+
+# Disable notifications to avoid popups during annotation
+disable-notifications = true
+
+# Fill shapes by default (rectangles, ellipses are filled)
+default-fill-shapes = true
+
+# Primary highlighter mode - block for rectangular highlights, freehand for pen-style
+primary-highlighter = "block"
+
+# Hide toolbars by default for more screen space
+# Press Ctrl+T to toggle them if needed
+default-hide-toolbars = true
+
+# Window title
+title = "Satty - Screenshot Annotation"
+
+# Application ID (D-Bus compatible format)
+app-id = "org.satty.satty"
+
+# Experimental: Brush input smoothing history size
+# Higher values (5-10) make brush strokes smoother
+brush-smooth-history-size = 10
+
+# Pan step size for arrow key navigation (pixels)
+pan-step-size = 50.0
+
+# Zoom factor for image (1.0 = no zoom)
+zoom-factor = 1.1
+
+# Text move length when using arrow keys
+text-move-length = 50.0
+
+# Input scale factor - useful if you have HiDPI displays
+# Adjust if text/icons appear too small/large
+input-scale = 1.0
+
+
+[keybinds]
+# Tool selection shortcuts
+# These match the defaults but you can customize them
+pointer = "p"
+crop = "c"
+brush = "b"
+line = "i"
+arrow = "z"
+rectangle = "r"
+ellipse = "e"
+text = "t"
+marker = "m"
+blur = "u"
+highlight = "g"
+
+
+[font]
+# Font for text annotations
+# Using system defaults that work well on Fedora
+family = "Roboto"
+style = "Regular"
+
+# Fallback fonts for better Unicode/emoji support
+# These are common on Fedora and ensure broad character coverage
+fallback = [
+    "Noto Sans",
+    "Noto Sans CJK SC",
+    "Noto Sans CJK JP",
+    "Noto Sans CJK KR",
+    "Noto Color Emoji",
+]
+
+
+[color-palette]
+# Custom color palette for quick access in the toolbar
+# Format: RRGGBBAA (hex with alpha channel)
+# AA = 00 (fully transparent) to FF (fully opaque)
+palette = [
+    "#ff0000ff",  # Red
+    "#00ff00ff",  # Green
+    "#0000ffff",  # Blue
+    "#ffff00ff",  # Yellow
+    "#ff00ffff",  # Magenta
+    "#00ffffff",  # Cyan
+    "#ffffffaa",  # White (semi-transparent for highlights)
+    "#000000ff",  # Black
+]
+
+# Additional preset colors available in color picker
+# Uncomment colors you use frequently
+custom = [
+    "#f0932bff",  # Orange
+    "#eb4d4bff",  # Bright red
+    "#6ab04cff",  # Bright green
+    "#22a6b3ff",  # Teal
+    "#130f40ff",  # Dark blue
+]
