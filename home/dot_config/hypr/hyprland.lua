@@ -170,11 +170,21 @@ hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exit())
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + T", hl.dsp.layout("toggle"))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 
+-- Reload config
+hl.bind(mainMod .. " + SHIFT + C", hl.dsp.reload_config())
+
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
+
+-- Window cycling
+hl.bind(mainMod .. " + Tab", hl.dsp.window.cycle_next())
+hl.bind(mainMod .. " + SHIFT + Tab", hl.dsp.window.cycle_prev())
+hl.bind("ALT + Tab", hl.dsp.window.cycle_next())
+hl.bind("ALT + SHIFT + Tab", hl.dsp.window.cycle_prev())
 
 hl.bind(mainMod .. " + F1", hl.dsp.exec_cmd("kitty --class floating-help -e butler help"))
 
@@ -213,6 +223,7 @@ hl.bind(mainMod .. " + SHIFT + 8", hl.dsp.window.move({ workspace = 8 }))
 hl.bind(mainMod .. " + SHIFT + 9", hl.dsp.window.move({ workspace = 9 }))
 hl.bind(mainMod .. " + SHIFT + 0", hl.dsp.window.move({ workspace = 10 }))
 
+-- Scratchpad (special "magic" workspace)
 hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
 
