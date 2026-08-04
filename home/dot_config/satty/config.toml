@@ -77,6 +77,26 @@ text-move-length = 50.0
 # Adjust if text/icons appear too small/large
 input-scale = 1.0
 
+# Window resize mode - smart resizes to fit content
+resize = { mode = "smart" }
+
+# Show/hide toolbars when window gains/loses focus
+focus-toggles-toolbars = true
+
+# Round caps for arrow and line tools
+default-round-caps = true
+
+# Show thumbnail preview in notifications
+notification-thumbnail = "screenshot"
+
+# Action bindings for keyboard shortcuts
+# Actions to trigger on Enter key
+actions-on-enter = ["save-to-clipboard"]
+# Actions to trigger on Escape key
+actions-on-escape = ["exit"]
+# Actions to trigger on right click (empty = disabled)
+actions-on-right-click = []
+
 
 [keybinds]
 # Tool selection shortcuts
