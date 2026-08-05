@@ -176,15 +176,15 @@ hl.bind(mainMod .. " + T", hl.dsp.layout("toggle"))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 
 -- Reload config
-hl.bind(mainMod .. " + SHIFT + C", hl.dsp.reload_config())
+hl.bind(mainMod .. " + SHIFT + C", hl.reload_config())
 
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 
 -- Window cycling
 hl.bind(mainMod .. " + Tab", hl.dsp.window.cycle_next())
-hl.bind(mainMod .. " + SHIFT + Tab", hl.dsp.window.cycle_prev())
+hl.bind(mainMod .. " + SHIFT + Tab", hl.dsp.focus_history_prev())
 hl.bind("ALT + Tab", hl.dsp.window.cycle_next())
-hl.bind("ALT + SHIFT + Tab", hl.dsp.window.cycle_prev())
+hl.bind("ALT + SHIFT + Tab", hl.dsp.focus_history_prev())
 
 hl.bind(mainMod .. " + F1", hl.dsp.exec_cmd("kitty --class floating-help -e butler help"))
 
