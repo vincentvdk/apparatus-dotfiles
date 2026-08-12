@@ -1,0 +1,196 @@
+/* Tokyo Night Night theme for Waybar */
+
+/* Color Definitions */
+@define-color base #1a1b26;
+@define-color crust #16161e;
+@define-color mantle #1a1b26;
+@define-color surface0 #24283b;
+@define-color surface1 #292e42;
+@define-color surface2 #2e3448;
+@define-color overlay0 #414868;
+@define-color overlay1 #545c7e;
+@define-color overlay2 #676e93;
+
+@define-color text #c0caf5;
+@define-color subtext0 #a9b1d6;
+@define-color subtext1 #949cbb;
+
+@define-color blue #7aa2f7;
+@define-color lavender #bb9af7;
+@define-color sapphire #7dcfff;
+@define-color sky #9ecfe5;
+@define-color teal #81c8be;
+@define-color green #9ece6a;
+@define-color yellow #e0af68;
+@define-color peach #f7768e;
+@define-color maroon #b4f9f8;
+@define-color red #f7768e;
+@define-color mauve #c099ff;
+@define-color pink #ff9e9e;
+
+/* Background */
+#workspaces {
+    background-color: @base;
+}
+
+/* Active workspace */
+#workspaces button.active {
+    background-color: @blue;
+    color: @base;
+}
+
+/* Inactive workspace */
+#workspaces button:not(.active) {
+    color: @text;
+}
+
+/* Clock */
+#clock {
+    background-color: @mauve;
+    color: @base;
+    font-size: 15px;
+}
+
+/* Tray icons */
+#tray {
+    color: @text;
+    background-color: @surface0;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @red;
+}
+
+/* Window title */
+#window {
+    padding: 0 10px;
+    color: @text;
+}
+
+/* Menu */
+#menu {
+    background-color: @surface0;
+    color: @text;
+    border-color: @mauve;
+}
+
+/* Menu items */
+#menu item {
+    color: @text;
+}
+
+#menu item.active {
+    background-color: @mauve;
+    color: @base;
+}
+
+/* Battery */
+#battery {
+    padding: 0 10px;
+    margin: 3px 2px;
+    background-color: @green;
+    border-radius: 6px;
+    color: @base;
+}
+
+#battery.charging {
+    background-color: @green;
+    color: @base;
+}
+
+#battery.warning:not(.charging) {
+    background-color: @yellow;
+    color: @base;
+}
+
+#battery.critical:not(.charging) {
+    background-color: @red;
+    color: @base;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: @text;
+        color: @red;
+    }
+}
+
+/* Network */
+#network {
+    padding: 0 10px;
+    margin: 3px 2px;
+    background-color: @teal;
+    border-radius: 6px;
+    color: @base;
+}
+
+#network.disconnected {
+    background-color: @red;
+    color: @base;
+}
+
+/* Bluetooth */
+#bluetooth {
+    padding: 0 10px;
+    margin: 3px 2px;
+    background-color: @blue;
+    border-radius: 6px;
+    color: @base;
+}
+
+#bluetooth.disabled,
+#bluetooth.off {
+    background-color: @surface2;
+    color: @text;
+}
+
+/* Pulseaudio */
+#pulseaudio {
+    padding: 0 10px;
+    margin: 3px 2px;
+    background-color: @yellow;
+    border-radius: 6px;
+    color: @base;
+}
+
+#pulseaudio.muted {
+    background-color: @surface2;
+    color: @text;
+}
+
+/* Memory */
+#memory {
+    padding: 0 10px;
+    margin: 3px 2px;
+    background-color: @lavender;
+    border-radius: 6px;
+    color: @base;
+}
+
+/* CPU */
+#cpu {
+    padding: 0 10px;
+    margin: 3px 2px;
+    background-color: @sapphire;
+    border-radius: 6px;
+    color: @base;
+}
+
+/* Submap */
+#submap {
+    padding: 0 10px;
+    margin: 3px 2px;
+    background-color: @peach;
+    border-radius: 6px;
+    color: @base;
+}
