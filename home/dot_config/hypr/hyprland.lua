@@ -176,7 +176,7 @@ hl.bind(mainMod .. " + T", hl.dsp.layout("toggle"))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 
 -- Reload config
-hl.bind(mainMod .. " + SHIFT + C", hl.reload_config())
+hl.bind(mainMod .. " + SHIFT + C", hl.dsp.reload_config())
 
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 
