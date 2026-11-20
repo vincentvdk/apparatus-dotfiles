@@ -27,14 +27,14 @@ end
 -- ============
 
 hl.on("hyprland.start", function()
-    hl.exec_cmd("waybar")
-    hl.exec_cmd("hyprpaper")
-    hl.exec_cmd("hypridle")
-    hl.exec_cmd("mako")
-    hl.exec_cmd("nm-applet")
-    hl.exec_cmd("systemctl --user start hyprpolkitagent")
-    hl.exec_cmd("hyprctl setcursor Adwaita 24")
-    hl.exec_cmd("LIBGL_ALWAYS_SOFTWARE=1 kitty --class apparatus-setup -e /usr/libexec/apparatus/first-login.sh")
+    hl.dsp.exec_cmd("waybar")
+    hl.dsp.exec_cmd("hyprpaper")
+    hl.dsp.exec_cmd("hypridle")
+    hl.dsp.exec_cmd("mako")
+    hl.dsp.exec_cmd("nm-applet")
+    hl.dsp.exec_cmd("systemctl --user start hyprpolkitagent")
+    hl.dsp.exec_cmd("hyprctl setcursor Adwaita 24")
+    hl.dsp.exec_cmd("LIBGL_ALWAYS_SOFTWARE=1 kitty --class apparatus-setup -e /usr/libexec/apparatus/first-login.sh")
 end)
 
 -- ===============================
