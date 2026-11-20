@@ -181,10 +181,11 @@ hl.bind(mainMod .. " + SHIFT + C", hl.dsp.reload_config())
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 
 -- Window cycling
+-- NOTE: hl.dsp.focus_history_prev() was removed in Hyprland 0.57; focus({ last = true }) is the replacement
 hl.bind(mainMod .. " + Tab", hl.dsp.window.cycle_next())
-hl.bind(mainMod .. " + SHIFT + Tab", hl.dsp.focus_history_prev())
+hl.bind(mainMod .. " + SHIFT + Tab", hl.dsp.focus({ last = true }))
 hl.bind("ALT + Tab", hl.dsp.window.cycle_next())
-hl.bind("ALT + SHIFT + Tab", hl.dsp.focus_history_prev())
+hl.bind("ALT + SHIFT + Tab", hl.dsp.focus({ last = true }))
 
 hl.bind(mainMod .. " + F1", hl.dsp.exec_cmd("kitty --class floating-help -e butler help"))
 
